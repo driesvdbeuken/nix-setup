@@ -56,11 +56,11 @@
     wget
     vim
     fastfetch
+    ffmpeg
   ];
 
   nix.settings = {
     experimental-features = [ "nix-command" "flakes" ];
-    auto-optimise-store = true;
   };
 
   services.pulseaudio.enable = false;

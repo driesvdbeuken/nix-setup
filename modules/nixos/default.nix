@@ -8,5 +8,6 @@
     ./desktop-gnome.nix
     ./desktop-cosmic.nix
     ./gaming.nix
+    ./nvidia.nix
   ];
 }

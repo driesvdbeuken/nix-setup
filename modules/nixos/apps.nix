@@ -7,6 +7,7 @@
     chromium
     libreoffice
     kitty
+    vscodium
   ];
 
   services.flatpak = {
