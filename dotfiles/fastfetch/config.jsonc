@@ -1,0 +1,134 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "type": "auto",
+        "padding": {
+            "top": 0,
+            "left": 0,
+            "right": 2
+        }
+    },
+    "display": {
+        "separator": "",
+        "color": {
+            "output": "default"
+        }
+    },
+    "modules": [
+        {
+            "type": "os",
+            "key": "[_OS_________> ",
+            "keyColor": "blue",
+            "outputColor": "cyan"
+        },
+        {
+            "type": "host",
+            "key": "[_Host_______> ",
+            "keyColor": "blue",
+            "outputColor": "white"
+        },
+        {
+            "type": "kernel",
+            "key": "[_Kernel_____> ",
+            "keyColor": "blue",
+            "outputColor": "white"
+        },
+        {
+            "type": "uptime",
+            "key": "[_Uptime_____> ",
+            "keyColor": "blue",
+            "outputColor": "white"
+        },
+        {
+            "type": "packages",
+            "key": "[_Packages___> ",
+            "keyColor": "green",
+            "outputColor": "white"
+        },
+        {
+            "type": "shell",
+            "key": "[_Shell______> ",
+            "keyColor": "green",
+            "outputColor": "white"
+        },
+        {
+            "type": "display",
+            "key": "[_Display____> ",
+            "keyColor": "green",
+            "outputColor": "white"
+        },
+        {
+            "type": "de",
+            "key": "[_DE_________> ",
+            "keyColor": "green",
+            "outputColor": "white"
+        },
+        {
+            "type": "wm",
+            "key": "[_WM_________> ",
+            "keyColor": "green",
+            "outputColor": "white"
+        },
+        {
+            "type": "theme",
+            "key": "[_Theme______> ",
+            "keyColor": "green",
+            "outputColor": "white"
+        },
+        {
+            "type": "localip",
+            "key": "[_Local_IP___> ",
+            "keyColor": "green",
+            "outputColor": "cyan"
+        },
+        {
+            "type": "cpu",
+            "key": "[_CPU________> ",
+            "keyColor": "magenta",
+            "outputColor": "white"
+        },
+        {
+            "type": "gpu",
+            "key": "[_GPU________> ",
+            "keyColor": "magenta",
+            "outputColor": "white"
+        },
+        {
+            "type": "memory",
+            "format": "[{percentage}] {used} / {total}",
+            "key": "[_Memory_____> ",
+            "keyColor": "magenta",
+            "outputColor": "white"
+        },
+        {
+            "type": "swap",
+            "format": "[{percentage}] {used} / {total}",
+            "key": "[_Swap_______> ",
+            "keyColor": "magenta",
+            "outputColor": "white"
+        },
+        {
+            "type": "disk",
+            "format": "[{size-percentage}] {size-used} / {size-total} ({mountpoint})",
+            "key": "[_Disk_______> ",
+            "keyColor": "magenta",
+            "outputColor": "white"
+        },
+        {
+            "type": "battery",
+            "key": "[_Battery____> ",
+            "keyColor": "magenta",
+            "outputColor": "white"
+        },
+        "break",
+        {
+            "type": "colors",
+            "paddingLeft": 15,
+            "symbol": "block",
+            "block": {
+                "width": 3,
+                "range": [0, 15]
+            }
+        }
+    ]
+}
