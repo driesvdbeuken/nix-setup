@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, ... }:
 
 let
   cfg = config.modules.nixos.nvidia;
@@ -42,12 +42,8 @@ in
     hardware.nvidia = {
       modesetting.enable = true;
 
-      # Pascal (MX350) requires proprietary modules + legacy_580; Ampere (RTX 3050) uses latest + open modules
       open = !cfg.legacyPascal;
       branch = lib.mkIf cfg.legacyPascal "legacy_580";
-
-      powerManagement.enable = true;
-      powerManagement.finegrained = cfg.prime.enable;
 
       nvidiaSettings = true;
 
@@ -60,9 +56,5 @@ in
         nvidiaBusId = cfg.prime.nvidiaBusId;
       };
     };
-
-    environment.systemPackages = with pkgs; [
-      nvtopPackages.full
-    ];
   };
 }
