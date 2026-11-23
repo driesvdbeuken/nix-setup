@@ -29,10 +29,6 @@
   };
   console.keyMap = "us";
 
-  # Universal display manager & keyring unlock across all hosts
-  services.displayManager.gdm.enable = true;
-  security.pam.services.gdm.enableGnomeKeyring = true;
-
   users.users.dries = {
     isNormalUser = true;
     description = "Dries";

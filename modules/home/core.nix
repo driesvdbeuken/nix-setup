@@ -10,7 +10,7 @@
     shellAliases = {
       nix-switch = "nh os switch";
       nix-test = "nh os test";
-      nix-clean = "nh clean all --keep 5";
+      nix-clean = "nh clean all --keep 2";
     };
   };
 
