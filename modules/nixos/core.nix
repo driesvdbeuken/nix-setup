@@ -27,6 +27,8 @@
       variant = "";
     };
   };
+  services.displayManager.sddm.enable = true;
+  security.pam.services.sddm.enableGnomeKeyring = true;
   console.keyMap = "us";
 
   users.users.dries = {

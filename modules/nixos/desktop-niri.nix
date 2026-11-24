@@ -11,21 +11,7 @@ in
   config = lib.mkIf cfg.enable {
     programs.niri.enable = true;
 
-    # Prevents NixOS from shadowing user PATH when niri-session starts
     systemd.user.services.niri.enableDefaultPath = false;
-
-    # Use greetd + tuigreet for Niri
-    services.displayManager.gdm.enable = false;
-    services.greetd = {
-      enable = true;
-      settings = {
-        default_session = {
-          command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --remember-user-session --sessions /run/current-system/sw/share/wayland-sessions:/run/current-system/sw/share/xsessions --cmd niri-session";
-          user = "greeter";
-        };
-      };
-    };
-    security.pam.services.greetd.enableGnomeKeyring = true;
 
     hardware.graphics.enable = true;
 

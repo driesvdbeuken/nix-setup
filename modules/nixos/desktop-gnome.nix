@@ -10,8 +10,6 @@ in
 
   config = lib.mkIf cfg.enable {
     services.desktopManager.gnome.enable = true;
-    services.displayManager.gdm.enable = lib.mkDefault true;
-    security.pam.services.gdm.enableGnomeKeyring = lib.mkDefault true;
 
     environment.systemPackages = with pkgs; [
       gnome-tweaks
