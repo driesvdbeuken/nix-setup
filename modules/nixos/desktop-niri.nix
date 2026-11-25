@@ -64,7 +64,6 @@ in
         };
       };
 
-      # Links both config.kdl and noctalia.kdl into ~/.config/niri/
       xdg.configFile."niri".source = ../../dotfiles/niri;
     };
   };

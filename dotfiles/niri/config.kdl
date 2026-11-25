@@ -23,7 +23,6 @@ layout {
 
     default-column-width { proportion 0.5; }
 
-    // Disabled by default (often handled via Noctalia or clean borderless look)
     focus-ring {
         off
         width 2
@@ -74,7 +73,9 @@ binds {
     // Core applications & shell
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+Space hotkey-overlay-title="Open Noctalia Launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Mod+S hotkey-overlay-title="Open Noctalia settings" { spawn-sh "noctalia msg settings-open"; }
+    Mod+Escape hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Mod+P hotkey-overlay-title="Open Noctalia settings" { spawn-sh "noctalia msg panel-toggle session"; }
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
     // Volume & microphone
@@ -102,10 +103,10 @@ binds {
     Mod+Down  { focus-window-down; }
     Mod+Up    { focus-window-up; }
     Mod+Right { focus-column-right; }
-    Mod+H     { focus-column-left; }
-    Mod+J     { focus-window-down; }
-    Mod+K     { focus-window-up; }
-    Mod+L     { focus-column-right; }
+    // Mod+H     { focus-column-left; }
+    // Mod+J     { focus-window-down; }
+    // Mod+K     { focus-window-up; }
+    // Mod+L     { focus-column-right; }
 
     Mod+Home { focus-column-first; }
     Mod+End  { focus-column-last; }
@@ -227,10 +228,8 @@ binds {
     Alt+Print  { screenshot-window; }
 
     // Session & power
-    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+    Mod+Alt+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
     Mod+Shift+E     { quit; }
     Ctrl+Alt+Delete { quit; }
     Mod+Shift+P     { power-off-monitors; }
 }
-
-include "noctalia.kdl"
